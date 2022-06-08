@@ -1,5 +1,6 @@
 // import './App.css';
-import Newevent1 from './routes/js/Newevent1';
+// import Newevent1 from './routes/js/Newevent1';
+import Article from "./routes/js/Article";
 // import { BrowserRouter, Route, Routes} from 'react-router-dom';
 // import Home from './routes/js/Home';
 // import Register from './routes/js/Register';
@@ -11,7 +12,9 @@ import Newevent1 from './routes/js/Newevent1';
 function App() {
   return (
     <>
-    <Newevent1/>
+    {/* <Newevent1/> */}
+    <Article />l
+
     {/* <Navigation />
       <Routes>
           <Route index element={<Home />} />
