@@ -1,9 +1,9 @@
 // import './App.css';
 // import Newevent1 from './routes/js/Newevent1';
-import Article from "./routes/js/Article";
-import Newevent1 from './routes/js/Newevent1';
-import Event_App from './routes/js/Event_app';
-import Registration from "./routes/js/Registration";
+// import Article from "./routes/js/Article";
+// import Newevent1 from './routes/js/Newevent1';
+// import Event_App from './routes/js/Event_app';
+// import Registration from "./routes/js/Registration";
 // import { BrowserRouter, Route, Routes} from 'react-router-dom';
 // import Home from './routes/js/Home';
 // import Register from './routes/js/Register';
@@ -15,8 +15,9 @@ import Registration from "./routes/js/Registration";
 function App() {
   return (
     <>
+    {/* <Home /> */}
     {/* <Newevent1/> */}
-    <Registration/>
+    {/* <Registration/> */}
     {/* <Navigation />
       <Routes>
           <Route index element={<Home />} />
