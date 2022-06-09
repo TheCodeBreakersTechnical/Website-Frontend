@@ -11,14 +11,17 @@
 // import Achievement from './routes/js/Achievement';
 // import Navigation from './routes/js/Navigation';
 // import Event from './routes/Event';
+import Achievements from "./routes/js/Achievements";
 
 function App() {
   return (
     <>
+    <Achievements></Achievements>
     {/* <Home /> */}
     {/* <Newevent1/> */}
     {/* <Registration/> */}
     {/* <Navigation />
+    
       <Routes>
           <Route index element={<Home />} />
           <Route path="register" element={ <Register />} /> 

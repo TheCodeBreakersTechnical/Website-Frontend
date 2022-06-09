@@ -1,0 +1,124 @@
+.Allcards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 35vw));
+    grid-gap: 8vw;
+    font-family: proxima-nova, sans-serif;
+}
+
+.imagecard {
+    position: relative;
+    right: 0;
+}
+
+.card_dp:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.card_dp {
+    transition: all 0.5s ease;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 100%;
+    padding: 0;
+    margin: 1.2vw 2.2vw 0 0;
+    backface-visibility: hidden;
+    -webkit-transition: opacity is ease-in-out;
+    -moz-transition: opacity is ease-in-out;
+    -ms-transition: opacity is ease-in-out;
+    -o-transition: opacity is ease-in-out;
+}
+
+.cardfront {
+    transition: all 0.8s ease;
+    position: absolute;
+    right: 0;
+}
+
+.description_card {
+    font-size: 1vw;
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+/* .cardback {
+    position: absolute;
+    right: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+} */
+
+
+/* .info_card {
+  border: 2px solid red;
+   
+  border-radius: 2px;
+  background-color: #e2e0e6;
+} */
+
+.cardsection {
+    background-color: #03112c;
+    padding-top: 75px;
+}
+
+.name {
+    font-family: PlusJakartaSans-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 2.2vw;
+    color: #f2f4f4;
+    display: flex;
+    flex: 1;
+    margin: 2.8vw 0.4vw 0.4vw 3vw;
+}
+
+@media (max-width: 600px) {
+    .cardtop {
+        height: 90px;
+        background-color: #bec4d0;
+    }
+    .name {
+        font-size: 16px;
+        margin-left: 14px;
+        margin-bottom: 20px;
+    }
+    .description_card {
+        font-size: 10px;
+    }
+    .info_card {
+        height: 100px;
+        background-color: #bec4d0;
+    }
+    .card_dp {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.cardtop {
+    border-radius: 25px 25px 0 0;
+    height: 7.5vw;
+    width: 100%;
+    background-color: #0a1e44;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.info_card {
+    border-radius: 25px;
+    position: relative;
+    padding: 25px 15px;
+    background-color: #142e5f;
+    /* margin: 3vw 0; */
+    margin: 20px 0;
+    height: 18vw;
+    box-shadow: 0 2px 5px #ccc;
+    text-align: left;
+}
+
+.cardbottom {
+    color: #ccc;
+    margin-top: 8vw;
+}
