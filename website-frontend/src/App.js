@@ -12,11 +12,12 @@
 // import Navigation from './routes/js/Navigation';
 // import Event from './routes/Event';
 import Achievements from "./routes/js/Achievements";
+import About_us from "./routes/js/About_us";
 
 function App() {
   return (
     <>
-    <Achievements></Achievements>
+    <About_us/>
     {/* <Home /> */}
     {/* <Newevent1/> */}
     {/* <Registration/> */}
