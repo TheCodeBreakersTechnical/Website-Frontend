@@ -61,7 +61,7 @@
     overflow: hidden;
 }
 
-.container {
+.navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +78,7 @@
     border-radius: 20%;
 }
   
-.login {
+.navLogin {
     padding: 10px;
     background-color: #061439;
     border-radius: 0 50px 50px 0;
@@ -97,7 +97,7 @@
     cursor: pointer;
 }
 
-ul {
+.navigation ul {
     list-style: none;
     font-size: 30px;
     display: flex;
@@ -109,22 +109,22 @@ ul {
     align-items: center;
 }
 
-ul > li {
+.navigation ul > li {
     padding-bottom: 8vh;
 }
 
-a {
+.navigation a {
     text-decoration: none;
     color: #a3cccc;
 }
 
-.signup {
+.navSignup {
     padding: 10px;
     background-color: #a3cccc;
     border-radius: 50px 0 0 50px;
     cursor: pointer;
 }
 
-.signup > a {
+.navSignup > a {
     color: #061439;
 }

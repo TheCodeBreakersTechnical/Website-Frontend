@@ -8,12 +8,12 @@ export default function Navbar() {
 
     return (
         <div className="navigation">
-            <div className="container">
+            <div className="navContainer">
                 <span className="sl">
-                    <span className="signup">
+                    <span className="navSignup">
                         <Link to="register"> Sign Up </Link>
                     </span>
-                    <span className="login">
+                    <span className="navLogin">
                         <Link to="login"> Log In </Link>
                     </span>
                 </span>

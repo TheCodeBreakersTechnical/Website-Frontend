@@ -25,7 +25,7 @@ function App() {
           <Route path="achievements" element={ <Achievement />} />
           <Route path="/events/*" element={ <Event />} /> 
           <Route path="events" element={ <EventStarting />} />
-      </Routes> */}
+      </Routes>
     </>
   );
 }
