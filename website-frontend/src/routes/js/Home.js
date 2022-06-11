@@ -3,6 +3,7 @@ import '../css/Home.css';
 // import Contact from '../components/Contact';
 import CodingSvg from '../../components/images/home-prg.svg';
 import HomeCarousel from '../../components/js/HomeCarousel';
+import Contact from '../../components/js/Contact';
 
 export default function homepage() {
   return (
@@ -13,6 +14,7 @@ export default function homepage() {
         <img src={CodingSvg} alt="CodingSvg" className='homepage-svg' />
       </div>
       <HomeCarousel />
+      <Contact />
     </div>
     </>
   );
