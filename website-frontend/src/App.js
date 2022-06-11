@@ -5,7 +5,7 @@
 // import Event_App from './routes/js/Event_app';
 // import Registration from "./routes/js/Registration";
 // import { BrowserRouter, Route, Routes} from 'react-router-dom';
-// import Home from './routes/js/Home';
+ import Home from './routes/js/Home';
 // import Register from './routes/js/Register';
 // import Login from './routes/js/Login';
 // import Achievement from './routes/js/Achievement';
@@ -16,8 +16,8 @@ import Achievements from "./routes/js/Achievements";
 function App() {
   return (
     <>
-    <Achievements></Achievements>
-    {/* <Home /> */}
+    {/* <Achievements></Achievements> */}
+    <Home />
     {/* <Newevent1/> */}
     {/* <Registration/> */}
     {/* <Navigation />
