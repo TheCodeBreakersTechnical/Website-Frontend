@@ -11,15 +11,13 @@ import Home from './routes/js/Home';
 // import Achievement from './routes/js/Achievement';
 import Navigation from './routes/js/Navigation';
 // import Event from './routes/Event';
+import Achievements from "./routes/js/Achievements";
+import About_us from "./routes/js/About_us";
 
 function App() {
   return (
     <>
-    <Navigation />
-    <Home />
-    {/* <Newevent1/> */}
-    {/* <Registration/> */}
-    {/* <Navigation />
+    
       <Routes>
           <Route index element={<Home />} />
           <Route path="register" element={ <Register />} /> 
