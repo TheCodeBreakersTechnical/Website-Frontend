@@ -56,7 +56,7 @@ export default function Newevent() {
         {/* Upcoming Events*/}
 
             <section id="team" className="teamab section-bg">
-                <div className="containerab" data-aos="fade-up">
+                <div className="container" >
 
                     <div className="section-title">
                         <h2>Upcoming Events</h2>
@@ -66,7 +66,7 @@ export default function Newevent() {
                     <div className="row">
 
                         <div className="col-lg-6">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">First Event</a></h4>
@@ -76,7 +76,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4 mt-lg-0">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="member d-flex align-items-start">
                                 <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Second Event</a></h4>
@@ -86,7 +86,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Third Event</a></h4>
@@ -96,7 +96,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-4.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Fourth Event</a></h4>
@@ -112,8 +112,8 @@ export default function Newevent() {
 
         {/* Past Events */}
 
-        <section id="team" className="team section-bga">
-                <div className="container" data-aos="fade-up">
+        <section id="team" className="teamab section-bga">
+                <div className="container" >
 
                     <div className="section-title">
                         <h2>Past Events</h2>
@@ -123,7 +123,7 @@ export default function Newevent() {
                     <div className="row">
 
                         <div className="col-lg-6">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">First Event</a></h4>
@@ -133,7 +133,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4 mt-lg-0">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Second Event</a></h4>
@@ -143,7 +143,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Third Event</a></h4>
@@ -153,7 +153,7 @@ export default function Newevent() {
                         </div>
 
                         <div className="col-lg-6 mt-4">
-                            <div className="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="member d-flex align-items-start" >
                                 <div className="pic"><img src="assets/img/team/team-4.jpg" className="img-fluid" alt="" /></div>
                                 <div className="member-info">
                                     <h4><a href="">Fourth Event</a></h4>

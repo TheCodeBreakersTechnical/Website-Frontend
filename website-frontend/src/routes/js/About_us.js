@@ -7,7 +7,7 @@ import Topic from '../../components/js/About_us/topic.js';
 
 function About_us() {
   return (
-    <div className="App">
+    <div className="Appsm">
       <Topic/>
       <Head/>
       <Card/>

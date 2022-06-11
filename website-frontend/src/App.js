@@ -15,24 +15,27 @@ import About_us from "./routes/js/About_us";
 function App() {
   return (
     <>
+    <Registration></Registration>
+    {/* <About_us/> */}
+    {/* <Login/> */}
+    {/* <Achievements/> */}
     {/* <About_us/>
     <Home />
     <Newevent1/> 
      <Registration>
     <Navigation /> */}
-    <Event_App/>
+    {/* <Event_App/> */}
+    {/* <Newevent1 /> */}
+  {/* <Navigation /> */}
       {/* <Routes>
           <Route index element={<Home />} />
-          {/* <Route path="register" element={ <Register />} />  */}
-          {/* <Route path="login" element={ <Login />} />
+          <Route path="login" element={ <Login />} />
           <Route path="achievements" element={ <Achievements />} />
           <Route path="articles" element={ <Article />} />
           <Route path="event_app" element={ <Event_App />} />
           <Route path="registration" element={ <Registration />} />
           <Route path="about_us" element={ <About_us />} />
-          <Route path="main_event" element={ <Newevent1 />} /> */}
-          {/* <Route path="/events/*" element={ <Event />} /> 
-          <Route path="events" element={ <EventStarting />} /> 
+          <Route path="main_event" element={ <Newevent1 />} />
   </Routes>  */}
     </>
   );

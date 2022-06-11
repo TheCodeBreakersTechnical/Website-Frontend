@@ -9,11 +9,11 @@
     margin-top: 9%;
 }
 
-p
+/* p
 {
     padding: 7% 5% 9% ;
     margin-left: 3%;
-}
+} */
 
 .about_card
 {
@@ -29,7 +29,8 @@ p
 .content
 {
     text-align: center;
- 
+    padding: 7% 5% 9% ;
+    margin-left: 3%;
   font-size: 15px;
   color:rgb(178, 186, 194);
 }

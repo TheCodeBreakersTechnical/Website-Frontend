@@ -8,12 +8,12 @@ export default function Navbar() {
 
     return (
         <div className="navigation">
-            <div className="container">
+            <div className="navContainer">
                 <span className="sl">
-                    <span className="signup">
+                    <span className="navSignup">
                         <Link to="register"> Sign Up </Link>
                     </span>
-                    <span className="login">
+                    <span className="navLogin">
                         <Link to="login"> Log In </Link>
                     </span>
                 </span>
@@ -26,7 +26,7 @@ export default function Navbar() {
                                 <Link to="/" onClick={toggleNav}> Home </Link>
                             </li>
                             <li>
-                                <Link to="/" onClick={toggleNav}> Articles </Link>
+                                <Link to="/articles" onClick={toggleNav}> Articles </Link>
                             </li>
                             <li>
                                 <Link to="/achievements" onClick={toggleNav}> Achievements </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
                                 <Link to="/" onClick={toggleNav}> About Us </Link>
                             </li>
                             <li>
-                                <Link to="/events" onClick={toggleNav}> Events </Link>
+                                <Link to="/main_event" onClick={toggleNav}> Events </Link>
                             </li>
                             {/* <li>Home</li>
                             <li>Articles</li>
