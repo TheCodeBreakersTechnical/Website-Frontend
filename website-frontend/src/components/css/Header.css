@@ -1,0 +1,128 @@
+/* * {
+    margin: 0;
+    transition: all 0.5s ease;
+} */
+
+:root {
+    --primary: rgba(35, 50, 66, 0.8);
+    --secondary: rgba(30, 26, 44, 0.8);
+}
+
+.clubname {
+    font-size: 2vw;
+    font-family: proxima-nova, sans-serif;
+    color: #fff;
+    padding: 15px;
+    padding-top: 18px;
+}
+
+.quote {
+    position: absolute;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    left: 40vw;
+    /* bottom: 20px; */
+    top: 475px;
+    color: #fff;
+    z-index: 2;
+}
+
+.Span1 {
+    font-size: 6vw;
+    line-height: 0.6em;
+    opacity: 1;
+}
+
+.title {
+    transition: all 0.8s ease;
+    position: absolute;
+    font-size: 5vw;
+    /* font-size: 50px; */
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    /* box-sizing: 120%; */
+    /* font-family: "flix"; */
+    font-family: PlusJakartaSans-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    left: 10vw;
+    /* left: 12vw; */
+    top: 175px;
+    /* top: 13vw; */
+    color: #fff;
+    z-index: 2;
+}
+
+.title:hover {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* body {
+    background-color: #0a1e44;
+} */
+
+/* li {
+    float: left;
+    padding: 15px;
+} */
+
+.list1 {
+    list-style-type: none;
+    font-size: 1.5vw;
+    color: #fff;
+    font-family: proxima-nova, sans-serif;
+    position: absolute;
+    right: 15px;
+    top: 7.5px;
+    z-index: 2;
+}
+
+/* img {
+    border-radius: 2%;
+    display: block;
+   
+    padding: 0;
+    padding-top: 55px;
+    padding-bottom: 75px;
+   
+    width: 100%;
+    box-shadow: 0 1px 1px #ccc;
+    height: 100vh;
+} */
+
+@media (max-width: 700px) {
+    .gradientoverlay {
+        height: 400px;
+    }
+    .quote {
+        font-size: 15px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .clubname {
+        font-size: 18px;
+    }
+    .headerbox {
+        height: 400px;
+    }
+}
+
+.gradientoverlay {
+    transition: all 0.8s ease;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)), url("../images/headerimage1.jpg");
+    width: 100%;
+    height: 600px;
+    /* height: 40vw; */
+    /* margin-bottom: 20px; */
+    background-size: 100% 100%;
+    /*box-shadow: 10px 10px 10px rgb(237, 236, 236);
+    */
+    z-index: 2;
+}
+
+.headerbox {
+    width: 100%;
+    height: 70px;
+    background-color: #06132b;
+}

@@ -1,0 +1,28 @@
+.homepage {
+  text-align: center;
+  height: 200vh;
+  color: #a3cccc;
+  background-attachment: fixed;
+  background-color: rgb(10, 25, 41);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: x;
+}
+
+.homepage-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.homepage-svg {
+  border: none;
+  width: 30rem;
+}
+
+@media (max-width: 800px) {
+  .homepage-svg {
+    display: none;
+  }
+}
