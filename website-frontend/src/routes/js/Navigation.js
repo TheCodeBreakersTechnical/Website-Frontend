@@ -10,8 +10,8 @@ const COLORS = {
 const MenuLabel = styled.label`
   background-color: ${COLORS.primaryLight};
   position: fixed;
-  top: 3rem;
-  right: 3rem;
+  top: 1rem;
+  right: 1.5rem;
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
@@ -23,8 +23,8 @@ const MenuLabel = styled.label`
 
 const NavBackground = styled.div`
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
   background-image: radial-gradient(
     ${COLORS.primaryDark},
     ${COLORS.primaryLight}
@@ -152,7 +152,7 @@ function HamburgerMenu() {
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/event_app">
+            <ItemLink onClick={handleClick} to="/main_event">
               Events
             </ItemLink>
           </li>
@@ -168,8 +168,3 @@ function HamburgerMenu() {
 }
 
 export default HamburgerMenu;
-
-
-// <Route path="login" element={ <Login />} />
-// <Route path="registration" element={ <Registration />} />
-// <Route path="main_event" element={ <Newevent1 />} />
