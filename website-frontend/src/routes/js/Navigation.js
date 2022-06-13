@@ -1,57 +1,170 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../css/Navigation.css';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleNav = () => setIsOpen(!isOpen);
+const COLORS = {
+  primaryDark: "rgb(10, 25, 41)",
+  primaryLight: "#a3cccc",
+};
 
-    return (
-        <div className="navigation">
-            <div className="navContainer">
-                <span className="sl">
-                    <span className="navSignup">
-                        <Link to="register"> Sign Up </Link>
-                    </span>
-                    <span className="navLogin">
-                        <Link to="login"> Log In </Link>
-                    </span>
-                </span>
-                <h1>The CodeBreakers</h1>
-                <div>
-                    <img onClick={toggleNav} src="Burger.png" alt="Menu-icon" className="menu"/>
-                    <div className={isOpen? "ol on" : "ol off"}>
-                        <ul>
-                            <li>
-                                <Link to="/" onClick={toggleNav}> Home </Link>
-                            </li>
-                            <li>
-                                <Link to="/articles" onClick={toggleNav}> Articles </Link>
-                            </li>
-                            <li>
-                                <Link to="/achievements" onClick={toggleNav}> Achievements </Link>
-                            </li>
-                            <li>
-                                <Link to="/" onClick={toggleNav}> IDE </Link>
-                            </li>
-                            <li>
-                                <Link to="/" onClick={toggleNav}> About Us </Link>
-                            </li>
-                            <li>
-                                <Link to="/main_event" onClick={toggleNav}> Events </Link>
-                            </li>
-                            {/* <li>Home</li>
-                            <li>Articles</li>
-                            <li>Achievements</li>
-                            <li>IDE</li>
-                            <li>About Us</li> */}
-                        </ul>
-                        <div className='closex' onClick={toggleNav}>
-                            X
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+const MenuLabel = styled.label`
+  background-color: ${COLORS.primaryLight};
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
+  text-align: center;
+`;
+
+const NavBackground = styled.div`
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-image: radial-gradient(
+    ${COLORS.primaryDark},
+    ${COLORS.primaryLight}
+  );
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  z-index: 600;
+  transform: ${(props) => (props.clicked ? "scale(80)" : "scale(0)")};
+  transition: transform 0.8s;
+`;
+
+const Icon = styled.span`
+  position: relative;
+  background-color: ${(props) => (props.clicked ? "transparent" : "black")};
+  width: 3rem;
+  height: 2px;
+  display: inline-block;
+  margin-top: 3.5rem;
+  transition: all 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: black;
+    width: 3rem;
+    height: 2px;
+    display: inline-block;
+
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
+    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+  }
+
+  &::after {
+    top: ${(props) => (props.clicked ? "0" : "0.8rem")};
+
+    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+  }
+
+  ${MenuLabel}:hover &::before {
+    top: ${(props) => (props.clicked ? "0" : "-1rem")};
+  }
+  ${MenuLabel}:hover &::after {
+    top: ${(props) => (props.clicked ? "0" : "1rem")};
+  }
+`;
+
+const Navigation = styled.nav`
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 600;
+  width: ${(props) => (props.clicked ? "100%" : "0")};
+  opacity: ${(props) => (props.clicked ? "1" : "0")};
+
+  transition: width 0.8s, opacity 0.8s;
+`;
+
+const List = styled.ul`
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+`;
+const ItemLink = styled(NavLink)`
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: ${COLORS.primaryLight};
+  padding: 1rem 2rem;
+
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    #fff 50%
+  );
+  background-size: 240%;
+  transition: all 0.4s;
+
+  &:hover,
+  &:active {
+    background-position: 100%;
+    color: ${COLORS.primaryDark};
+    transform: translateX(1rem);
+  }
+`;
+
+function HamburgerMenu() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  return (
+    <>
+      <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
+        <Icon clicked={click}>&nbsp;</Icon>
+      </MenuLabel>
+      <NavBackground clicked={click}>&nbsp;</NavBackground>
+
+      <Navigation clicked={click}>
+        <List>
+          <li>
+            <ItemLink onClick={handleClick} to="/">
+              Home
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/about_us">
+              About Us
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/articles">
+              Articles
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/main_event">
+              Events
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/achievements">
+              Achievements
+            </ItemLink>
+          </li>
+        </List>
+      </Navigation>
+    </>
+  );
 }
+
+export default HamburgerMenu;
