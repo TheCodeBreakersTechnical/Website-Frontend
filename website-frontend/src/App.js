@@ -7,10 +7,12 @@ import Home from './routes/js/Home';
 import Login from './routes/js/Login';
 import Achievements from "./routes/js/Achievements";
 import About_us from "./routes/js/About_us";
+import Navigation from './routes/js/Navigation';
 
 function App() {
   return (
     <>
+      <Navigation />
       <Routes>
           <Route index element={<Home />} />
           <Route path="login" element={ <Login />} />
