@@ -6,10 +6,10 @@ import {
   useLocation
 } from 'react-router-dom'
 import { IoIosAddCircleOutline } from "react-icons/io";
-import useStyles from "../../components/js/Formstyles";
-import Getarticle from "../../components/js/Getarticle";
-import Createform from "../../components/js/Createform";
-import Updateform from "../../components/js/Updateform";
+import useStyles from "../../components/js/Articlepage/Formstyles";
+import Getarticle from "../../components/js/Articlepage/Getarticle";
+import Createform from "../../components/js/Articlepage/Createform";
+import Updateform from "../../components/js/Articlepage/Updateform";
 
 const Data = [
   {
@@ -59,9 +59,9 @@ const Article = () => {
     <>
       <Navbar />
       <div className="container">
-        {location.pathname == '/' ?
+        {location.pathname == '/articles' ?
           <>
-            <Link to='/create'><button type="submit" className={`btn m-3 d-flex align-items-center ${classes.button}`}><IoIosAddCircleOutline className="me-2" />Add</button></Link>
+            <Link index="true" to='create'><button type="submit" className={`btn m-3 d-flex align-items-center ${classes.button}`}><IoIosAddCircleOutline className="me-2" />Add</button></Link>
 
           </>
           : ""
@@ -69,8 +69,8 @@ const Article = () => {
 
         <Routes>
           <Route path="/" element={<Getarticle />} />
-          <Route path="/create" element={<Createform />} />
-          <Route path="/update/:id" element={<Updateform />} />
+          <Route index path="create" element={<Createform />} />
+          <Route index path="update/:id" element={<Updateform />} />
         </Routes>
       </div>
     </>

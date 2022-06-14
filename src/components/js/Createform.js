@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import useStyles from "../js/Formstyles";
+import useStyles from "./Formstyles";
 import { useNavigate } from "react-router-dom";
 
 const Createform = () => {
@@ -31,7 +31,7 @@ const Createform = () => {
                 axios.post(`https://627961304a5ef80e2c08f4a0.mockapi.io/articledata`, { ...obj })
                     .then(() => {
                         console.log("post requet succeeded")
-                        navigate('/')
+                        navigate('/articles')
                     })
                     .catch(err => console.log("post requet failed, error: ", err))
             }
