@@ -36,9 +36,9 @@ function App() {
           <Route path="about_us" element={ <About_us />} />
           <Route path="main_event" element={ <Newevent1 />} />
 
-          {/* <Route path="articles/" element={<Getarticle />} />
+          <Route path="articles/" element={<Getarticle />} />
           <Route path="articles/create" element={<Createform />} />
-          <Route path="articles/update/:id" element={<Updateform />} /> */}
+          <Route path="articles/update/:id" element={<Updateform />} />
         </Routes> 
     </>
   );

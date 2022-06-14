@@ -67,14 +67,11 @@ const Article = () => {
           : ""
         }
 
-<<<<<<< HEAD:src/routes/js/Article.js
-=======
         <Routes>
           <Route path="/" element={<Getarticle />} />
           <Route index path="create" element={<Createform />} />
           <Route index path="update/:id" element={<Updateform />} />
         </Routes>
->>>>>>> c6b5b2939de74b3e3c9b1f24b6a02b56ea7649a1:website-frontend/src/routes/js/Article.js
       </div>
     </>
   )
