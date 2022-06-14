@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { FaRegClock } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEdit } from "react-icons/fi";
-import useStyles from "../js/Formstyles";
+import useStyles from "./Formstyles";
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
@@ -12,6 +13,8 @@ const Getarticle = () => {
 
     // Read request
     const [APIData, setAPIData] = useState([]);
+    const navigate = useNavigate()
+
     // const [readMore, setReadMore] = useState(true)
     useEffect(() => {
         axios.get(`https://627961304a5ef80e2c08f4a0.mockapi.io/articledata`)
@@ -35,6 +38,8 @@ const Getarticle = () => {
                         })
                         .catch(err => console.log(err))
                 }).catch(err => console.log("delete request failed, error: ", err))
+            navigate('/articles');
+
         }
         else {
             console.log("Delete request was cancelled")
@@ -62,13 +67,13 @@ const Getarticle = () => {
                                 </small>
                             </div>
                             <div className={`d-flex`}>
-                                <Link to={`/update/${id}`}>
+                                <Link index="true" to={`update/${id}`}>
                                     <button
                                         className={`btn mx-2 ${classes.icons}`}>
                                         <FiEdit />
                                     </button>
                                 </Link>
-                                <Link to={`/`}>
+                                <Link to={`/articles`}>
                                     <button
                                         className={`btn mx-2 ${classes.icons}`}
                                         onClick={() => handleDelete(id)}>

@@ -4,7 +4,7 @@ import {
     useNavigate
 } from 'react-router-dom'
 import axios from "axios";
-import useStyles from "../js/Formstyles";
+import useStyles from "./Formstyles";
 
 const getdata = async () => {
     const data = await axios.get(`https://627961304a5ef80e2c08f4a0.mockapi.io/articledata`)
