@@ -35,7 +35,7 @@ const Updateform = () => {
                 axios.put(`https://627961304a5ef80e2c08f4a0.mockapi.io/articledata/${id}`, JSON.stringify(obj))
                 .then(() => console.log("put request succeeded")).catch(err => console.log("put request failed, err: ", err))
                 console.log("submitted successfully",obj)
-                navigate('/')
+                navigate('/articles')
             }
         } 
 

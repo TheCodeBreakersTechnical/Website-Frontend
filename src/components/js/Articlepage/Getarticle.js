@@ -12,10 +12,11 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 
 
 const Getarticle = () => {
-
+    
     // Read request
     const [APIData, setAPIData] = useState([]);
     const navigate = useNavigate()
+    const classes = useStyles()
 
     // const [readMore, setReadMore] = useState(true)
     useEffect(() => {
@@ -49,7 +50,6 @@ const Getarticle = () => {
 
     }
 
-    const classes = useStyles()
 
     return (
         <div className={`container ${classes.articleContainer}`}>
