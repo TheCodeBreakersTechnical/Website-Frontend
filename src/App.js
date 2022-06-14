@@ -10,6 +10,10 @@ import Login from './routes/js/Login';
 import Achievements from "./routes/js/Achievements";
 import About_us from "./routes/js/About_us";
 import Navigation from './routes/js/Navigation';
+import Getarticle from "./components/js/Getarticle";
+import Createform from "./components/js/Createform";
+import Updateform from "./components/js/Updateform";
+
 
 function App() {
   return (
@@ -31,6 +35,10 @@ function App() {
           <Route path="registration" element={ <Registration />} />
           <Route path="about_us" element={ <About_us />} />
           <Route path="main_event" element={ <Newevent1 />} />
+
+          <Route path="articles/" element={<Getarticle />} />
+          <Route path="articles/create" element={<Createform />} />
+          <Route path="articles/update/:id" element={<Updateform />} />
         </Routes> 
     </>
   );
