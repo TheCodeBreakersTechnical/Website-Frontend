@@ -67,11 +67,6 @@ const Article = () => {
           : ""
         }
 
-        <Routes>
-          <Route path="/" element={<Getarticle />} />
-          <Route path="/create" element={<Createform />} />
-          <Route path="/update/:id" element={<Updateform />} />
-        </Routes>
       </div>
     </>
   )
