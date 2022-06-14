@@ -13,8 +13,8 @@ const MenuLabel = styled.label`
   top: 1rem;
   right: 1.5rem;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
@@ -23,8 +23,8 @@ const MenuLabel = styled.label`
 
 const NavBackground = styled.div`
   position: fixed;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
   background-image: radial-gradient(
     ${COLORS.primaryDark},
     ${COLORS.primaryLight}
@@ -40,17 +40,17 @@ const NavBackground = styled.div`
 const Icon = styled.span`
   position: relative;
   background-color: ${(props) => (props.clicked ? "transparent" : "black")};
-  width: 2rem;
+  width: 1.3rem;
   height: 2px;
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
   transition: all 0.3s;
 
   &::before,
   &::after {
     content: "";
     background-color: black;
-    width: 2rem;
+    width: 1.3rem;
     height: 2px;
     display: inline-block;
 
@@ -60,21 +60,21 @@ const Icon = styled.span`
   }
 
   &::before {
-    top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
+    top: ${(props) => (props.clicked ? "0" : "-0.5rem")};
     transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
   }
 
   &::after {
-    top: ${(props) => (props.clicked ? "0" : "0.8rem")};
+    top: ${(props) => (props.clicked ? "0" : "0.5rem")};
 
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
 
   ${MenuLabel}:hover &::before {
-    top: ${(props) => (props.clicked ? "0" : "-1rem")};
+    top: ${(props) => (props.clicked ? "0" : "-0.6rem")};
   }
   ${MenuLabel}:hover &::after {
-    top: ${(props) => (props.clicked ? "0" : "1rem")};
+    top: ${(props) => (props.clicked ? "0" : "0.6rem")};
   }
 `;
 
