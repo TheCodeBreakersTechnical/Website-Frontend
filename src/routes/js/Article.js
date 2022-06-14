@@ -44,7 +44,7 @@ const Data = [
 ]
 
 
-const Navbar = () => {
+const NavBar = () => {
   return <h1 className="p-4 mb-3 text-center border">Navigation Component</h1>
 }
 
@@ -57,7 +57,7 @@ const Article = () => {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <div className="container">
         {location.pathname == '/articles' ?
           <>

@@ -6,14 +6,17 @@ import { FaRegClock } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEdit } from "react-icons/fi";
 import useStyles from "./Formstyles";
+import ReactReadMoreReadLess from "react-read-more-read-less";
+
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 const Getarticle = () => {
-
+    
     // Read request
     const [APIData, setAPIData] = useState([]);
     const navigate = useNavigate()
+    const classes = useStyles()
 
     // const [readMore, setReadMore] = useState(true)
     useEffect(() => {
@@ -47,7 +50,6 @@ const Getarticle = () => {
 
     }
 
-    const classes = useStyles()
 
     return (
         <div className={`container ${classes.articleContainer}`}>
@@ -83,17 +85,15 @@ const Getarticle = () => {
                             </div>
                         </div>
                         <p className="py-4 px-2 fs-5">
-                            {content}
-                            {/* {content.substr(0,content.indexOf('.') + 1)}
-                            {readMore ?
-                                <a href="#" className={`${classes.anchor}`} onClick={() => setReadMore(false)}> Read more...</a>
-                                :
-                                <>
-                                    {content.substr(content.indexOf('.') + 1)}
-                                    <br/>
-                                    <a href="#" className={`${classes.anchor}`} onClick={() => setReadMore(true)}> Read less</a>
-                                </>
-                            } */}
+                            <ReactReadMoreReadLess
+                                charLimit={200}
+                                readMoreText={"Read more ▼"}
+                                readLessText={"Read less ▲"}
+                                readMoreClassName="read-more-less--more"
+                                readLessClassName="read-more-less--less"
+                            >
+                                {content}
+                            </ReactReadMoreReadLess>
                         </p>
                         <div>
                             <span className="p-2">Posted by</span>{author}
