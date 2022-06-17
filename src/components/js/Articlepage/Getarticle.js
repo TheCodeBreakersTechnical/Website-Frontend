@@ -57,7 +57,7 @@ const Getarticle = () => {
                 const showDate = date.split('/').map(i => parseInt(i))
 
                 return (
-                    <div key={id} className={`mb-5 py-5 ${classes.bBottom}`}>
+                    <div key={id} className={`mb-5 py-5 ${classes.bBottom} ${classes.articleblock}`}>
                         <div
                             className={`p-2 d-flex justify-content-between`}>
                             <div>

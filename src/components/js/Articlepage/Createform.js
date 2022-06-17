@@ -64,9 +64,9 @@ const Createform = () => {
 
     return (
         <>
-            <form onSubmit={(event) => handleSubmit(event)} className={`${classes.form} p-2`}>
-                <h3 className={`text-center p-3 w-50 ${classes.heading} m-auto`}>Create New Article</h3>
-                <div className="m-3">
+            <form onSubmit={(event) => handleSubmit(event)} className={` ${classes.form} px-4 py-2`}>
+                <h3 className={`text-center text-white mb-5 mx-auto p-3 w-75 ${classes.heading}`}>Create New Article</h3>
+                <div className="mb-3">
                     <input
                         type="text"
                         className={`form-control ${classes.border}`}
@@ -77,7 +77,7 @@ const Createform = () => {
                     />
                     <span>{formErrors.title}</span>
                 </div>
-                <div className="mx-3 my-2">
+                <div className="mb-3">
                     <input type="text"
                         className={`form-control 
                     ${classes.border}`}
@@ -89,10 +89,10 @@ const Createform = () => {
                     />
                     <span>{formErrors.author}</span>
                 </div>
-                <div className="mt-2 mx-3">
+                <div className="mb-3">
                     <textarea
                         className={`form-control ${classes.border}`}
-                        cols={100} rows={10}
+                        cols={100} rows={6}
                         placeholder="Enter your article here"
                         id="content"
                         name="content"
@@ -101,10 +101,10 @@ const Createform = () => {
                     />
                     <span>{formErrors.content}</span>
                 </div>
-                <div className="mx-3">
+                <div className="mb-3">
                     <button
                         type="submit"
-                        className={`btn p-1 w-100 ${classes.button}`}>
+                        className={``}>
                         Submit
                     </button>
                 </div>

@@ -90,7 +90,7 @@ const Updateform = () => {
             <form onSubmit={(event) => handleUpdate(event)} className={`p-2 ${classes.form}`}>
                 <h3 className={`text-center p-3 w-50 ${classes.heading} m-auto`}>Update Article</h3>
                 <div className="m-3">
-                    <label htmlFor="title" className="form-label fw-bold">Title:</label>
+                    <label htmlFor="title" className="form-label fs-6">Title:</label>
                     <input
                         type="text"
                         className={`form-control ${classes.border}`}
@@ -101,7 +101,7 @@ const Updateform = () => {
                     <span>{formErrors.title}</span>
                 </div>
                 <div className="mx-3 mt-2 mb-3">
-                    <label htmlFor="author" className="form-label fw-bold">Author:</label>
+                    <label htmlFor="author" className="form-label fs-6">Author:</label>
                     <input
                         type="text"
                         className={`form-control ${classes.border}`}
@@ -112,9 +112,9 @@ const Updateform = () => {
                     <span>{formErrors.author}</span>
                 </div>
                 <div className="mt-2 mx-3">
-                    <label htmlFor="content" className="form-label fw-bold">Comments:</label>
+                    <label htmlFor="content" className="form-label fs-6">Comments:</label>
                     <textarea
-                        className={`form-control ${classes.border}`} cols={100} rows={8}
+                        className={`form-control ${classes.border}`} cols={100} rows={6}
                         name="content"
                         id="content"
                         defaultValue={content}
